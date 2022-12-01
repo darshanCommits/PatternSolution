@@ -2,9 +2,8 @@
 
 void main() {
     for(int i = 5 ; i >= 1 ; i--) {
-        int temp = i ;
-        for(int j = temp; j <= (temp+(i-1)) ; j++) {
-            printf("%d", j);
+        for(int j = 5; j >= i ; j--) {
+            printf("%d", i);
         }
         printf("\n");
     }

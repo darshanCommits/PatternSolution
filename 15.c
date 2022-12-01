@@ -1,13 +1,7 @@
 #include<stdio.h>
 
-// 5
-// 45
-// 345
-// 2345
-// 12345
-
-void main() {
-    for(int i = 5 ; i >= 1 ; i--) {
+void main () {
+    for(int i = 1 ; i <= 5 ; i++) {
         for(int j = i ; j <= 5 ; j++) {
             printf("%d", j);
         }

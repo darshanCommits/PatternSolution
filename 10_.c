@@ -1,11 +1,7 @@
 #include<stdio.h>
 
 
-// 11111
-// 2222
-// 333
-// 44
-// 5
+//yet to solve
 
 void main() {
     for(int i = 1 ; i <= 5 ; i++) {
