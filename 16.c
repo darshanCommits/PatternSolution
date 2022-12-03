@@ -1,8 +1,14 @@
 #include<stdio.h>
 
-void main () {
-    for(int i = 1 ; i <= 9 ; i=i+2) {
-        for(int j = i ; j <= 9 ; j=j+2) {
+// 5
+// 45
+// 345
+// 2345
+// 12345
+
+void main() {
+    for(int i = 5 ; i >= 1 ; i--) {
+        for(int j = i ; j <= 5 ; j++) {
             printf("%d", j);
         }
         printf("\n");
