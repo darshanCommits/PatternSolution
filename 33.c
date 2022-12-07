@@ -1,23 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void main () {
+void main()
+{
     int n = 5;
-    for(int i = 1; i <= n ; i++) {
-        for(int j = 1 ; j <= 5-i ; j++) {
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= 5 - i; j++)
+        {
             printf(" ");
         }
-        for(int j = 1 ; j <= i ; j++) {
+        for (int j = 1; j <= i; j++)
+        {
             printf("*");
         }
         printf("\n");
     }
-    for(int i = 1; i < n ; i++) {
-        for(int j = 1; j <= i ; j++){
+    for (int i = 1; i < n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
             printf(" ");
         }
-        for(int j = 4 ; j >= i ; j--) {
+        for (int j = 4; j >= i; j--)
+        {
             printf("*");
         }
         printf("\n");
-    }    
+    }
 }
