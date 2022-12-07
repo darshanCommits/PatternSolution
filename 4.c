@@ -1,6 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
-void main() {
+void main()
+{
     for (int i = 1; i <= 5; i++)
     {
         for (int j = 1; j <= 5; j++)
@@ -8,5 +9,5 @@ void main() {
             printf("%d", j);
         }
         printf("\n");
-    }    
+    }
 }
