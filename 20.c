@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 // 1
 // 23
@@ -6,11 +6,12 @@
 // 4567
 // 56789
 
-
-void main() {
-    for(int i = 1; i <= 5 ; i++){
-        int temp = i ;
-        for(int j = temp ; j <= (temp*2)-1 ; j++) {
+void main()
+{
+    for (int i = 1; i <= 5; i++)
+    {
+        for (int j = i; j < 2 * i; j++)
+        {
             printf("%d", j);
         }
         printf("\n");
