@@ -29,5 +29,5 @@ hide_errors="false"
 [[ "$1" == "-H" ]] && hide_errors="true" && shift
 source_file="$1"
 
-echo Running "$source_file"
+# echo Running "$source_file"
 compile_c_code "$source_file" "$hide_errors" && run_and_cleanup "$hide_errors" || echo "Compilation failed."

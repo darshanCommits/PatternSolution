@@ -1,9 +1,12 @@
 #!/bin/bash
 
-# Compile and run all .c files in the current directory
-for file in src/*.c; do
+# Determine the directory of the "run" script
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Compile and run all .c files in the "src" directory
+for file in "$script_dir"/src/*.c; do
     if [ -f "$file" ]; then
-        scripts/crun -H "$file"
+        "$script_dir/scripts/crun" -H "$file"
         echo
     fi
 done
