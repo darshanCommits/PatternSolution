@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Function to compile the C code
+compile_c_code() {
+    local source_file="$1"
+    local hide_errors="$2"
+    local gcc_options="-g -std=c99"
+
+    [ "$hide_errors" != "true" ] && gcc_options="$gcc_options -Wall"
+
+    gcc $gcc_options -o "/tmp/$$" "$source_file" || return 1
+}
+
+# Function to run the compiled binary and clean up
+run_and_cleanup() {
+    local hide_errors="$1"
+    if [ "$hide_errors" = "true" ]; then
+        "/tmp/$$" 2>/dev/null
+    else
+        "/tmp/$$"
+    fi
+    rm "/tmp/$$"
+}
+
+[ $# -eq 0 ] && echo "Usage: $0 [-H] <source_file.c>" && exit 1
+
+hide_errors="false"
+
+[[ "$1" == "-H" ]] && hide_errors="true" && shift
+source_file="$1"
+
+echo Running "$source_file"
+compile_c_code "$source_file" "$hide_errors" && run_and_cleanup "$hide_errors" || echo "Compilation failed."
