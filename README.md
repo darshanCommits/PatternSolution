@@ -5,7 +5,7 @@ Welcome to the Pattern Solutions repository, a collection of my solutions to var
 ## Features
 
 - **Diverse Set of Problems:** This repository contains solutions for a wide variety of programming problems, ranging from algorithmic challenges to design patterns.
-[Link to Questions](./questions/QUESTIONS.md)
+[Link to Questions](./questions/QUESTIONS.txt)
 
 - **Organized Structure:** Each problem solution is organized within its own file, making it easy to navigate and understand.
 
